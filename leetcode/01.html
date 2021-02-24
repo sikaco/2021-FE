@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+</body>
+<script>
+  /**
+   * @param {number[]} nums
+   * @param {number} target
+   * @return {number[]}
+   */
+  var twoSum = function (nums, target) {
+    const numsMap = {};
+    nums.forEach((num, i) => {
+      numsMap[target - num] = i
+    })
+
+    for (let i = 0, len = nums.length; i < len; i++) {
+      const n = nums[i]
+      const pairI = numsMap[n]
+
+      if (pairI !== undefined && i !== pairI) {
+        return ret = [i, pairI]
+      }
+    }
+  };
+
+  console.log(twoSum([3, 2, 4], 6))
+</script>
+
+</html>

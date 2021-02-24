@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+</body>
+<script>
+  /**
+   * Definition for singly-linked list.
+   * function ListNode(val, next) {
+   *     this.val = (val===undefined ? 0 : val)
+   *     this.next = (next===undefined ? null : next)
+   * }
+   */
+  /**
+   * @param {ListNode} l1
+   * @param {ListNode} l2
+   * @return {ListNode}
+   */
+  var addTwoNumbers = function (l1, l2) {
+    const [arrLong, arrShort] = l1.length > l2.length
+      ? [l1, l2]
+      : [l2, l1]
+
+    let carry = 0
+    const retArr = []
+    for (let i = 0; i < arrLong.length; i++) {
+      const n1 = arrLong[i]
+      const n2 = arrShort[i] || 0
+      const ret = n1 + n2 + carry
+
+      carry = ret > 9 ? 1 : 0
+
+      retArr[i] = ret % 10
+    }
+
+    if (carry) {
+      retArr.push(1)
+    }
+
+    // const retArr = arrLong.map((n1, i) => {
+    //   const n2 = arrShort[i] || 0
+    //   const ret = n1 + n2 + carry
+
+    //   carry = ret > 9 ? 1 : 0
+
+    //   return ret % 10
+    // })
+
+    return retArr
+  };
+
+  console.log(
+    addTwoNumbers([2, 4, 3], [5, 6, 4]),
+    addTwoNumbers([9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9])
+  )
+</script>
+
+</html>
