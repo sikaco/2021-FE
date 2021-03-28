@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="./1.css">
+</head>
+
+<body>
+  <bdi dir="auto">内容</bdi>
+  <bdi dir="ltr">内容</bdi>
+  <bdi dir="rtl">内容</bdi>
+
+  <details>
+    <summary>父节点</summary>
+    <details>
+      <summary>子节点</summary>
+      <summary>子节点</summary>
+      <summary>子节点</summary>
+    </details>
+  </details>
+
+  <dialog open>
+    test
+  </dialog>
+
+  <figure>
+    <div>
+      <h3>12312</h3>
+    </div>
+  </figure>
+
+  <h1>123123</h1>
+
+  <p dir="ltr">This arabic word <bdi>ARABIC_PLACEHOLDER</bdi> is automatically displayed right-to-left.</p>
+
+  <img src="./image.png" alt="" width="300" loading="eager">
+  <img src="./image.png" alt="" width="300" loading="lazy">
+
+  <div class="photos-list"></div>
+
+  <input type="text">
+
+</body>
+<script type="text/javascript">
+  const obj1 = {
+    a: {
+      a: {
+        a: 123
+      },
+      b: {
+        a: 123
+      },
+    }
+  }
+
+  const obj2 = {
+    a: {
+      b: {
+        a: 234
+      }
+    }
+  }
+
+  const resultObj = Object.assign({}, obj1, obj2)
+
+  const resultObj1 = Object.assign({}, obj1, obj2)
+
+  /*
+    console.log(resultObj)
+    
+    resultObj的输出是：{
+      a: {
+        b: {
+          a: 234
+        }
+      }
+    }
+
+  */
+</script>
+
+</html>
