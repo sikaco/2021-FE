@@ -1,0 +1,40 @@
+body {
+  height: 1000px;
+
+  /* background-color: red; */
+  background-image: url(./image.png);
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: -50% 0;
+}
+
+div {
+  color: red;
+  text-indent: 50px;
+}
+
+p {
+  /* 不换行 */
+  white-space: nowrap;
+  /* 避免文字的默认溢出 */
+  overflow: hidden;
+  /* 点点点 */
+  text-overflow: ellipsis;
+}
+
+.left {
+  width: 100px;
+  height: 200px;
+  background: yellowgreen;
+  float: left;
+}
+
+.right {
+  height: 300px;
+  background: blue;
+  /* overflow: hidden; */
+}
+
+p {
+  quotes: "~""~";
+}

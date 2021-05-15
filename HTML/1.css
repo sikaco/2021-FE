@@ -12,3 +12,10 @@ details>* {
 summary:not(:first-child) {
   padding-left: 36px;
 }
+
+a:active {
+  color: blue;
+  font-size: 20px;
+}
+
+/*  */

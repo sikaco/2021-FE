@@ -1,0 +1,54 @@
+.header,
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: gray;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.left,
+.right {
+  width: 120px;
+}
+
+.left {
+  height: 300px;
+  background-color: red;
+  float: left;
+}
+
+.center {
+  height: 400px;
+  background-color: blue;
+  overflow: hidden;
+}
+
+.right {
+  height: 500px;
+  background-color: red;
+  float: right;
+}
+
+[title~=hello] {
+  color: blue;
+}
+
+div {
+  /* -webkit-transition: width 2s, height 2s, -webkit-transform 2s; */
+  /* transition: all 0.5s; */
+}
+
+#center-container {
+  width: 100%;
+  height: 400px;
+}
+
+#center-container .content {
+  width: 100px;
+  height: 80px;
+  background-color: blue;
+}
